@@ -1,0 +1,3 @@
+Logging der User Sitzungen.
+
+Jegliche Aktionen der Benutzer auf der Webseite, sowie jegliche System Aktionen sollen in der Logdatei notiert werden.
