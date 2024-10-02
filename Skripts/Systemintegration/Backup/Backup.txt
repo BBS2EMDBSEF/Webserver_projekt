@@ -1,0 +1,4 @@
+Erstellen eines Backup Systems.
+
+Es soll über CronJobs ein Backup angefordert werden, welches lokal gespeichert wird.
+Über eine Wiederherstellung soll das ausgewählte Backup dann abgerufen und in das System als aktuellen Stand integriert werden.

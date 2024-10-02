@@ -1,0 +1,3 @@
+Einstellen der Firewall.
+
+Port und Firewall Einstellungen so anpassen, dass ein SSH Server einsatzbereit ist.
