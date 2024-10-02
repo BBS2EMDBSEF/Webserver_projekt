@@ -1,0 +1,3 @@
+Setup für das System.
+
+Webserver, Datenbank und PHP Installation und Einrichtung, sowie updaten der Dienste.
