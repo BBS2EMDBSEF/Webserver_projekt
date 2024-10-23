@@ -1,5 +1,10 @@
 #!/bin/bash
 
+sudo apt update
+sudo apt install git
+
+git --version
+
 # Pfad zum Verzeichnis, in das das Repository geklont wird
 TARGET_DIR="$HOME/Skripts/Systemintegration/Setup/"
 
