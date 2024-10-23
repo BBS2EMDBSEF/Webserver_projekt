@@ -1,10 +1,13 @@
-sudo apt update #Updaten aller installierten Dateien auf den aktuellsten Stand
-sudo apt install git #Installation von git, falls nicht vorhanden
+#!/bin/bash
 
-git --version
+# Pfad zum Verzeichnis, in das das Repository geklont wird
+TARGET_DIR="$HOME/Skripts/Systemintegration/Setup/"
 
-git clone https://github.com/BBS2EMDBSEF/Webserver_projekt.git #Klonen des Repositories, falls Änderungen commited wurden
-
-cd ~/Skripts/Systemintegration/Setup #Navigation zum Setup Ordner
-chmod +x webseite_einrichten.sh #Veränderung der Berechtigungen, um webseite_einrichten.sh auszuführen
-bash ./webseite_einrichten.sh #Ausführen der webseite_einrichten.sh
+# Überprüfen, ob das Verzeichnis schon existiert
+if [ -d "$TARGET_DIR" ]; then
+    echo "Das Verzeichnis $TARGET_DIR existiert bereits. Kein Klonen erforderlich."
+else
+    # Klone das GitHub-Repository
+    echo "Klone das Repository..."
+    git clone https://github.com/BBS2EMDBSEF/Webserver_projekt.git $TARGET_DIR
+fi
