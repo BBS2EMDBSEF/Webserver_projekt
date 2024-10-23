@@ -7,4 +7,4 @@ git clone https://github.com/BBS2EMDBSEF/Webserver_projekt.git #Klonen des Repos
 
 cd ~/Skripts/Systemintegration/Setup #Navigation zum Setup Ordner
 chmod +x webseite_einrichten.sh #Veränderung der Berechtigungen, um webseite_einrichten.sh auszuführen
-./webseite_einrichten.sh #Ausführen der webseite_einrichten.sh
+bash ./webseite_einrichten.sh #Ausführen der webseite_einrichten.sh
