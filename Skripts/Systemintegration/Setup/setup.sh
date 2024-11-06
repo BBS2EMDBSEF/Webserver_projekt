@@ -27,9 +27,4 @@ systemctl enable mysql
 
 systemctl status mysql
 
-ufw allow OpenSSH
-ufw allow mysql
-
-ufw enable
-
 echo "Konfiguration abgeschlossen. Du kannst jetzt auf deinen Server zugreifen."
