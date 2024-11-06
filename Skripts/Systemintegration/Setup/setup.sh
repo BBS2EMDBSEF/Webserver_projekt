@@ -11,13 +11,13 @@ sudo apt install git -y
 
 sudo nano git_klonen.sh
 
-apt install -y openssh-server
+sudo apt install -y openssh-server
 
-apt install -y mysql-server
+sudo apt install -y mysql-server
 
 sudo nano mysql_config.sh
 
-apt install -y phpmyadmin
+sudo apt install -y phpmyadmin
 
 sudo nano php_config.sh
 
