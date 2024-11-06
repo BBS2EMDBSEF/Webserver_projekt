@@ -9,6 +9,8 @@ sudo apt-get update
 
 sudo apt install git -y
 
+sudo nano git_klonen.sh
+
 apt install -y openssh-server
 
 apt install -y mysql-server
