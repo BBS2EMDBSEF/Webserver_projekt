@@ -4,7 +4,7 @@ BSEF23 - Lernfeld 12
 Gruppenmitglieder: Dang, Lara, Malte, Niklas  
 Ansprechpartner: Malte Wagenaar
 
-# Aufbau
+## Aufbau
 
 - Hauptseite zur Navigation
 - Login-/Registrierungsmaske hinter jeweiligen Buttons
