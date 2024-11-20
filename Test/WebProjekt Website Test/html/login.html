@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="header-container">
+                <h1>Login</h1>
+                <div class="auth-buttons">
+                    <a href="../index.html" class="btn">Zurück zur Startseite</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <form action="/login" method="POST" class="login-form">
+                <label for="benutzername">Benutzername:</label>
+                <input type="text" id="benutzername" name="benutzername" placeholder="Benutzername" required>
+                
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password" placeholder="Passwort" required>
+                
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p class="form-footer">
+                Noch kein Konto? <a href="register.html">Hier registrieren</a>.
+            </p>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Deine Webseite. Alle Rechte vorbehalten.</p>
+        </footer>
+    </div>
+</body>
+</html>
