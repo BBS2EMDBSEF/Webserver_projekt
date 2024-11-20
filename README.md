@@ -12,6 +12,6 @@ Ansprechpartner: Malte Wagenaar
 - Profil Unterseite zur Einsicht des eigenen Profils (Benutzername / Displayname, Benutzerrollen, Passwort ändern)
 
 
-# Meilensteine
+## Meilensteine
 
 Die Meilensteine sind unter [Projects](https://github.com/orgs/BBS2EMDBSEF/projects/13/views/1) zu finden.
