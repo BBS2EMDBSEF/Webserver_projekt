@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="header-container">
+                <h1>Registrierung</h1>
+                <div class="auth-buttons">
+                    <a href="../index.html" class="btn">Zurück zur Startseite</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <form action="/register" method="POST" class="registration-form">
+                <label for="username">Benutzername:</label>
+                <input type="text" id="username" name="username" placeholder="Benutzername" required>
+                
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password" placeholder="Passwort" required>
+                
+                <label for="confirm-password">Passwort bestätigen:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Passwort bestätigen" required>
+                
+                <button type="submit" class="btn">Registrieren</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Deine Webseite. Alle Rechte vorbehalten.</p>
+        </footer>
+    </div>
+</body>
+</html>
