@@ -1,0 +1,233 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Höhe des gesamten Viewports */
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Header Styles */
+header {
+    background: #0078D7;
+    color: #fff;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: #fff;
+    color: #0078D7;
+    font-weight: bold;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.auth-buttons .btn:hover {
+    background: #005A9E;
+    color: #fff;
+    border-color: #005A9E;
+}
+
+.auth-buttons .btn-secondary {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.auth-buttons .btn-secondary:hover {
+    background: #fff;
+    color: #0078D7;
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Standardmäßig ausgeblendet */
+    height: 100%;
+    width: 250px;
+    background: #005A9E;
+    display: flex;
+    flex-direction: column; /* Vertikale Ausrichtung */
+    overflow-x: hidden;
+    transition: left 0.3s ease; /* Animationseffekt */
+    z-index: 1000;
+    padding-top: 60px;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav ul li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.side-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.side-nav ul li a:hover {
+    background: #004479;
+    padding: 1px;
+}
+
+.side-nav.open {
+    left: 0;
+}
+
+.menu-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+.menu-overlay.visible {
+    display: block;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1; /* Hauptbereich füllt den verfügbaren Platz */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main h2 {
+    color: #0078D7;
+}
+
+/* Formulare */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-container .btn {
+    width: 100%;
+    padding: 10px;
+    background: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-container .btn:hover {
+    background: #005A9E;
+}
+
+/* Platzhalter */
+.placeholder {
+    flex-grow: 1; /* Flexibles Wachstum, um leeren Raum zu füllen */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+}
+
+/* Profil-Link Styling */
+.profile-link {
+    position: absolute; /* Absolut positioniert */
+    margin-top: 78.85vh;
+    width: 100%; /* Volle Breite */
+    background: #004080; /* Dunklerer Farbton für Abhebung */
+    text-align: center;
+}
+
+.profile-link a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.profile-link a:hover {
+    background: #003366;
+}
