@@ -1,8 +1,8 @@
-echo "mysql-server mysql-server/root_password password admin" | debconf-set-selections
-echo "mysql-server mysql-server/root_password_again password admin" | debconf-set-selections
+sudo apt update
+sudo apt install mysql-server
+sudo mysql_secure_installation
 
-mysql -u admin -p admin -e "CREATE USER 'Service'@'localhost' IDENTIFIED BY 'Admin';"
-mysql -u admin -p admin -e "GRANT ALL PRIVILEGES ON *.* TO 'Service'@'localhost' WITH GRANT OPTIONS;"
-mysql -u admin -p admin -e "FLUSH PRIVILEGES;"
+sudo systemctl start mysql
+sudo systemctl enable mysql
 
-echo "MySQL Konfiguration abgeschlossen."
+sudo mysql -u root -p
