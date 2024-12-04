@@ -1,26 +1,26 @@
-# Backup && Log Pfad
-BACKUP_DIR="/var/www/html"
-LOG_FILE="/var/log/backup.log"
+#!/bin/bash
 
-# Protokollierung von Nachrichten
-log() {
-  local log_message="$1"
-  echo "$(date "+%Y-%m-%d %H:%M:%S"): $log_message" >> "$LOG_FILE"
-}
+# Variablen
+GIT_REPO="git@github.com:<USERNAME>/backup-repo.git"
+CLONE_DIR="/path/to/backup-clone"
+ARCHIVE_NAME="repository_backup_$(date +'%Y-%m-%d_%H-%M-%S').tar.gz"
 
-# Führe das Backup durch
-backup() {
-  local backup_file="$BACKUP_DIR/backup_$(date +%Y%m%d).tar.gz"
-  log "Backup wird gestartet..."
+echo "========================================="
+echo "Backup des gesamten Repositorys gestartet"
+echo "========================================="
 
-  tar -czf "$backup_file" "$BACKUP_DIR"
+# Repository klonen
+echo "Klonen des Repositorys..."
+rm -rf "$CLONE_DIR"
+git clone --mirror "$GIT_REPO" "$CLONE_DIR"
 
-  if [ $? -eq 0 ]; then
-    log "Backup erfolgreich abgeschlossen. Backup-Datei: $backup_file"
-  else
-    log "Fehler beim Backup!"
-  fi
-}
+# Repository als Archiv speichern
+echo "Erstelle ein Archiv des geklonten Repositorys..."
+tar -czf "$ARCHIVE_NAME" -C "$(dirname "$CLONE_DIR")" "$(basename "$CLONE_DIR")"
 
-# Hauptprogramm
-backup
+# Archiv speichern
+echo "Archiv gespeichert unter $ARCHIVE_NAME."
+
+echo "========================================="
+echo "Repository-Backup abgeschlossen!"
+echo "========================================="

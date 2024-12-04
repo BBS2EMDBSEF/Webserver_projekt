@@ -1,30 +1,51 @@
-apt update
+#!/bin/bash
 
-apt install -y language-pack-de
-update-locale LANG=de_DE.UTF-8 LC_MESSAGES=POSIX
+echo "========================================="
+echo "Gesamtes Setup-Skript"
+echo "========================================="
 
-timedatactl set-timezone Europe/Berlin
+# SSH einrichten
+echo "SSH wird eingerichtet..."
+bash ssh_config.sh
 
-sudo apt-get update
+# MySQL einrichten
+echo "MySQL wird eingerichtet..."
+bash mysql_config.sh
 
-sudo apt install git -y
+# PHP einrichten
+echo "PHP wird eingerichtet..."
+bash php_config.sh
 
-sudo nano git_klonen.sh
+# Apache einrichten
+echo "Apache wird eingerichtet..."
+bash apache_config.sh
 
-sudo apt install -y openssh-server
+# Backup-Skript prüfen
+BACKUP_SCRIPT="/path/to/backup_to_github.sh" # Pfad zu deinem Backup-Skript
+CRON_JOB="0 0 * * * /bin/bash $BACKUP_SCRIPT >> /path/to/backup.log 2>&1"
 
-sudo apt install -y mysql-server
+echo "Backup-Skript wird überprüft..."
+if [ -f "$BACKUP_SCRIPT" ]; then
+    echo "Backup-Skript gefunden. Richte Cronjob ein..."
+    
+    # Bestehende Cronjobs sichern
+    crontab -l > mycron || echo "" > mycron
+    
+    # Cronjob hinzufügen, falls nicht vorhanden
+    if ! grep -q "$BACKUP_SCRIPT" mycron; then
+        echo "$CRON_JOB" >> mycron
+        crontab mycron
+        echo "Cronjob für Backup eingerichtet."
+    else
+        echo "Cronjob für Backup existiert bereits."
+    fi
 
-sudo nano mysql_config.sh
+    # Temporäre Datei löschen
+    rm -f mycron
+else
+    echo "Backup-Skript nicht gefunden. Bitte sicherstellen, dass $BACKUP_SCRIPT existiert."
+fi
 
-sudo apt install -y phpmyadmin
-
-sudo nano php_config.sh
-
-systemctl start mysql
-
-systemctl enable mysql
-
-systemctl status mysql
-
-echo "Konfiguration abgeschlossen. Du kannst jetzt auf deinen Server zugreifen."
+echo "========================================="
+echo "Setup abgeschlossen! Alle Dienste sind installiert."
+echo "========================================="
