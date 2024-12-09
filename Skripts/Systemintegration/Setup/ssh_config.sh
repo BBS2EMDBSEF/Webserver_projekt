@@ -6,7 +6,7 @@ echo "========================================="
 
 # System aktualisieren
 echo "System wird aktualisiert..."
-sudo apt update && sudo apt upgrade -y
+sudo apt update
 
 # SSH installieren und aktivieren
 echo "SSH wird installiert..."
