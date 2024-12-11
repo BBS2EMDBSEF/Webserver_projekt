@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "========================================="
-echo "MariaDB Installation Script"
-echo "========================================="
-
 # MariaDB installieren
 sudo apt update > /dev/null 2>&1
 sudo apt install mariadb-server mariadb-client -y > /dev/null 2>&1
