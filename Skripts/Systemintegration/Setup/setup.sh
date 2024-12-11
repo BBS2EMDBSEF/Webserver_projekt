@@ -9,8 +9,8 @@ echo "SSH wird eingerichtet..."
 bash ssh_config.sh
 
 # MySQL einrichten
-echo "MySQL wird eingerichtet..."
-bash mysql_config.sh
+echo "MariaDB wird eingerichtet..."
+bash mariadb_config.sh
 
 # PHP einrichten
 echo "PHP wird eingerichtet..."

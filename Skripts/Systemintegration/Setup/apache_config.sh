@@ -5,12 +5,9 @@ echo "Apache Installation Script"
 echo "========================================="
 
 # Apache installieren
-echo "Apache wird installiert..."
-sudo apt install -y apache2
-
-# Apache starten
-sudo systemctl enable apache2
-sudo systemctl start apache2
+sudo apt install -y apache2 > /dev/null 2>&1
+sudo systemctl enable apache2 > /dev/null 2>&1
+sudo systemctl start apache2 > /dev/null 2>&1
 
 echo "Apache ist erfolgreich installiert und aktiv."
 echo "========================================="
