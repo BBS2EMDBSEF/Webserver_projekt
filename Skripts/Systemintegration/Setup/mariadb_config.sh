@@ -16,5 +16,7 @@ y
 y
 EOF
 
+sudo bash ../Datenbank/db_create.sh > /dev/null 2>&1
+
 echo "MariaDB ist erfolgreich installiert und konfiguriert."
 echo "========================================="
