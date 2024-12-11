@@ -6,6 +6,7 @@ echo "========================================="
 
 # 1. System aktualisieren und upgraden
 echo "System wird aktualisiert..."
+sudo apt upgrade
 sudo apt update
 
 # 2. Zeitzone einstellen
