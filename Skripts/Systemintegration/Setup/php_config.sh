@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "========================================="
-echo "PHP Installation Script"
-echo "========================================="
-
 # PHP und Module installieren
 sudo apt install -y php php-mysql libapache2-mod-php > /dev/null 2>&1
 

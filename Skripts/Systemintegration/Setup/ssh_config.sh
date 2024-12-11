@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "========================================="
-echo "SSH Installation Script"
-echo "========================================="
-
 # System aktualisieren
 sudo apt update > /dev/null 2>&1
 

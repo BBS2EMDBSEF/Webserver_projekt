@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "========================================="
-echo "Apache Installation Script"
-echo "========================================="
-
 # Apache installieren
 sudo apt install -y apache2 > /dev/null 2>&1
 sudo systemctl enable apache2 > /dev/null 2>&1
