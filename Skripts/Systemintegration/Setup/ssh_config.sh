@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # System aktualisieren
-sudo apt update > /dev/null 2>&1
+sudo apt update
 
 # SSH installieren und aktivieren
-sudo apt install -y openssh-server > /dev/null 2>&1
-sudo systemctl enable ssh > /dev/null 2>&1
-sudo systemctl start ssh > /dev/null 2>&1
+sudo apt install -y openssh-server
+sudo systemctl enable ssh
+sudo systemctl start ssh
 
 # Sicherstellen, dass das Skript mit Root-Rechten ausgeführt wird
 if [[ $EUID -ne 0 ]]; then
