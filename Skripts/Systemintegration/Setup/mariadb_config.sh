@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # MariaDB installieren
-sudo apt update > /dev/null 2>&1
-sudo apt install mariadb-server mariadb-client -y > /dev/null 2>&1
-sudo systemctl start mariadb > /dev/null 2>&1
-sudo systemctl enable mariadb > /dev/null 2>&1
+sudo apt update
+sudo apt install mariadb-server mariadb-client -y
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
 
 # Sicherheitsinstallation (ohne Interaktion)
-sudo mysql_secure_installation <<EOF > /dev/null 2>&1
+sudo mysql_secure_installation <<EOF
 y
 n
 y
@@ -16,7 +16,7 @@ y
 y
 EOF
 
-sudo bash ../Datenbank/db_create.sh > /dev/null 2>&1
+sudo bash ../Datenbank/db_create.sh
 
 echo "MariaDB ist erfolgreich installiert und konfiguriert."
 echo "========================================="
