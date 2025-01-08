@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "========================================="
+echo "SSH Installation"
+echo "========================================="
+
 # Überprüfung, ob das Skript mit root-Rechten ausgeführt wird
 if [[ $EUID -ne 0 ]]; then
    echo "Dieses Skript muss mit root-Rechten ausgeführt werden!" >&2
