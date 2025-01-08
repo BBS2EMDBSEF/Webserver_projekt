@@ -9,17 +9,14 @@ sudo apt-get update
 
 sudo apt install git -y
 
-sudo nano git_klonen.sh
-
 sudo apt install -y openssh-server
-
-sudo apt install mariadb-server -y
-sudo mysql_secure_installation
 
 sudo apt install -y phpmyadmin
 
-sudo nano php_config.sh
+sudo bash php_config.sh
 
-sudo nano mysql_config.sh
+sudo bash apache_config.sh
+
+sudo bash mariadb_config.sh
 
 echo "Konfiguration abgeschlossen. Du kannst jetzt auf deinen Server zugreifen."
