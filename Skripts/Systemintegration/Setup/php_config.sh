@@ -1,3 +1,9 @@
+echo "========================================="
+echo "PHP Installation"
+echo "========================================="
+
+sudo apt install -y phpmyadmin
+
 sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 sudo systemctl restart apache2
 
@@ -9,5 +15,3 @@ echo "admin"
 echo "phpmyadmin phpmyadmin/mysql/app-pass password admin"
 echo "admin"
 echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect nginx"
-
-echo "PHP Konfiguration abgeschlossen."

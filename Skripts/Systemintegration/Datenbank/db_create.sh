@@ -1,10 +1,13 @@
-CREATE DATABASE my_database;
-CREATE USER 'my_user'@'%' IDENTIFIED BY 'my_password';
-GRANT ALL PRIVILEGES ON my_database.* TO 'my_user'@'%';
-FLUSH PRIVILEGES;
+#!/bin/bash
 
-sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+echo "========================================="
+echo "Datenbank und Tabelle erstellen"
+echo "========================================="
 
-bind-address = 0.0.0.0
+# Create a new database
+sudo mysql -u pi -p'raspberry' -e "CREATE DATABASE benutzerDB;"
 
-sudo ufw allow 3306
+# Create a new table 'Registrierung' with username and password columns
+sudo mysql -u pi -p'raspberry' -e "USE benutzerDB; CREATE TABLE Registrierung (id INT AUTO_INCREMENT PRIMARY KEY, benutzername VARCHAR(255) NOT NULL, passwort VARCHAR(255) NOT NULL);"
+
+echo "Datenbank 'benutzerDB' und Tabelle 'Registrierung' erstellt."
