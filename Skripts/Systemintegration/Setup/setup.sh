@@ -7,9 +7,9 @@ timedatactl set-timezone Europe/Berlin
 
 sudo apt-get update
 
-sudo apt install git -y
-
 sudo apt install -y openssh-server
+
+sudo bash ../SSH/ssh.sh
 
 sudo apt install -y phpmyadmin
 
