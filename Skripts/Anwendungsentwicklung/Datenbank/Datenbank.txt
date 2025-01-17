@@ -1,3 +1,0 @@
-Erstellen einer Datenbank.
-
-In der Datenbank sollen User Daten gespeichert werden, usw.

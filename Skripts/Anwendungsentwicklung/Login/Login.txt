@@ -1,3 +1,0 @@
-Login Maske für User.
-
-Erstellen einer Login Maske für User, welche die Webseite benutzen.
