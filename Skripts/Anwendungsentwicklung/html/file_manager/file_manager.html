@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <link rel="stylesheet" href="../../css/website/index.css">
+    <link rel="stylesheet" href="../../css/file_manager/file_manager.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Raspberry Pi - File Manager</h1>
+            <div class="auth-buttons">
+                <a href="../../html/website/index.html" class="btn">Zurück zur Startseite</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Verwalte deine Dateien im Home-Verzeichnis</h2>
+
+        <!-- Anzeige der Nachricht -->
+        <p class="message"><?php if (isset($message)) { echo $message; } ?></p>
+
+        <!-- Error Popup anzeigen, wenn keine Verbindung zum Raspberry Pi besteht -->
+        <?php if ($error_message): ?>
+            <div class="error-popup show">
+                <p><?php echo $error_message; ?></p>
+                <button onclick="window.location.reload();">Versuche es erneut</button>
+            </div>
+        <?php endif; ?>
+
+        <!-- Datei hochladen -->
+        <h3>Datei hochladen</h3>
+        <form action="file_manager.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="upload_file" required>
+            <button type="submit">Hochladen</button>
+        </form>
+
+        <!-- Dateien anzeigen und löschen -->
+        <h3>Verfügbare Dateien</h3>
+        <ul>
+            <?php if (isset($files)) {
+                foreach ($files as $file): ?>
+                    <li>
+                        <?php echo htmlspecialchars($file); ?>
+                        <form action="file_manager.php" method="POST" style="display:inline;">
+                            <button type="submit" name="delete_file" value="<?php echo htmlspecialchars($file); ?>">Löschen</button>
+                        </form>
+                        <a href="<?php echo '/home/pi/' . htmlspecialchars($file); ?>" download>Download</a>
+                    </li>
+                <?php endforeach; 
+            } ?>
+        </ul>
+    </main>
+</body>
+</html>

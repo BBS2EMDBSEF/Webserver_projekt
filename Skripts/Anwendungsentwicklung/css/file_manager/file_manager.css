@@ -1,0 +1,149 @@
+/* File Manager Styles */
+
+/* Header */
+header {
+    background-color: #0078D7;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Hauptbereich */
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+main h2 {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+/* Datei hochladen */
+h3 {
+    color: #0078D7;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+form input[type="file"] {
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #0078D7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #005a9e;
+}
+
+/* Dateien anzeigen */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li form {
+    margin: 0;
+}
+
+ul li button {
+    background-color: #d9534f;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul li button:hover {
+    background-color: #c9302c;
+}
+
+ul li a {
+    background-color: #5bc0de;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+ul li a:hover {
+    background-color: #31b0d5;
+}
+
+/* Error Popup Styles */
+.error-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 1.2rem;
+}
+
+.error-popup.show {
+    display: block;
+}
+
+.error-popup button {
+    background-color: white;
+    color: red;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.error-popup button:hover {
+    background-color: red;
+    color: white;
+}
