@@ -5,6 +5,7 @@ GREEN='\033[32m'
 RESET='\033[0m'
 
 if [ -f "ssh.sh" ]; then
+    echo chmod +x ssh.sh
     echo -e "${GREEN}ssh.sh gefunden. Skript wird jetzt ausgeführt...${RESET}"
     sudo bash ../SSH/ssh.sh # Wechsle auf die ssh.sh im Verzeichnis ../SSH
 else
