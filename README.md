@@ -8,7 +8,8 @@ Ansprechpartner: Malte Wagenaar
 
 - Hauptseite zur Navigation
 - Login-/Registrierungsmaske hinter jeweiligen Buttons
-- User-Verzeichnis Unterseite für Zugriff auf Up-/Download Funktion
+- File-Management Unterseite für Zugriff auf Up-/Download Funktion
+- Backup Unterseite zum Import & Export eines Backups
 - Profil Unterseite zur Einsicht des eigenen Profils (Benutzername / Displayname, Benutzerrollen, Passwort ändern)
 
 
